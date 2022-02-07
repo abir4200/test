@@ -1,0 +1,335 @@
+<%- include('include/_head') %>
+
+    </head>
+
+    <body>
+
+        <%- include('include/_header') %>
+
+            <section id="menuBG" class="work-box">
+                <div class="cntr">
+                    <div id="ProductsMenu" class="products-menu" data-aos="fade-right">
+
+                        <ul>
+                            <li class=" mixitup-control-active" data-filter="*"> All
+                            </li>
+                            <li data-filter=".denims"> Denims</li>
+                            <li data-filter=".suits">Suits</li>
+                            <li data-filter=".sweater"> Sweater</li>
+                            <li data-filter=".intimates"> Intimates</li>
+                            <li data-filter=".outingwear">Outingwear</li>
+                            <li data-filter=".activewear"> Activewear</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="jump-button" data-aos="fade-up" data-aos-offset="150">
+                        <a href="#"> <i class="fas fa-level-up-alt"></i></a>
+                    </div>
+
+
+                    <div class="products-list" data-aos="fade-left">
+
+                        <!-- deims -->
+                        <div class="deims">
+                            <% if(dress.denims !='' ) { %>
+                                <% dress.denims.forEach(function(product, index){ %>
+
+                                    <div class="mix products-item denims">
+                                        <a href="/product/<%= product._id %>">
+                                            <div class="products-img"><img
+                                                    src="/uploads/image1/<%= product.image1[0].filename %>" alt="">
+                                            </div>
+                                            <div class="products-overlay">
+                                                <div class="products-content">
+
+                                                    <h4>
+                                                        <%= product.name %>
+                                                    </h4>
+                                                    <h5> <span>id</span> : <%= product.gid %>
+                                                    </h5>
+                                                    <p> <span> <i>designer :</i> </span>
+                                                        <%= product.designer %>
+                                                    </p>
+                                                    <p><span> category </span>: <%= product.category %>
+                                                    </p>
+                                                    <p>
+                                                        <%= product.description %>.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <% }) %>
+                                        <% } else { %>
+                                            <p></p>
+                                            <% } %>
+                        </div>
+                        <!-- suits -->
+                        <% if(dress.suits !='' ) { %>
+                            <% dress.suits.forEach(function(product, index){ %>
+
+                                <div class="mix products-item suits">
+                                    <a href="/product/<%= product._id %>">
+                                        <div class="products-img"><img
+                                                src="/uploads/image1/<%= product.image1[0].filename %>" alt="">
+                                        </div>
+                                        <div class="products-overlay">
+                                            <div class="products-content">
+
+                                                <h4>
+                                                    <%= product.name %>
+                                                </h4>
+                                                <h5> <span>id</span> : <%= product.gid %>
+                                                </h5>
+                                                <p> <span> <i>designer :</i> </span>
+                                                    <%= product.designer %>
+                                                </p>
+                                                <p><span> category </span>: <%= product.category %>
+                                                </p>
+                                                <p>
+                                                    <%= product.description %>.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <% }) %>
+                                    <% } else { %>
+                                        <p></p>
+                                        <% } %>
+
+                                            <!-- sweater -->
+                                            <div class="sweater">
+                                                <% if(dress.sweater !='' ) { %>
+                                                    <% dress.sweater.forEach(function(product, index){ %>
+
+                                                        <div class="mix products-item sweater">
+                                                            <a href="/product/<%= product._id %>">
+                                                                <div class="products-img"><img
+                                                                        src="/uploads/image1/<%= product.image1[0].filename %>"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="products-overlay">
+                                                                    <div class="products-content">
+
+                                                                        <h4>
+                                                                            <%= product.name %>
+                                                                        </h4>
+                                                                        <h5> <span>id</span> : <%= product.gid %>
+                                                                        </h5>
+                                                                        <p> <span> <i>designer :</i> </span>
+                                                                            <%= product.designer %>
+                                                                        </p>
+                                                                        <p><span> category </span>: <%= product.category
+                                                                                %>
+                                                                        </p>
+                                                                        <p>
+                                                                            <%= product.description %>.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <% }) %>
+                                                            <% } else { %>
+                                                                <p></p>
+                                                                <% } %>
+                                            </div>
+                                            <!-- intimates -->
+                                            <div class="intimates">
+                                                <% if(dress.intimates !='' ) { %>
+                                                    <% dress.intimates.forEach(function(product, index){ %>
+
+                                                        <div class="mix products-item intimates">
+                                                            <a href="/product/<%= product._id %>">
+                                                                <div class="products-img"><img
+                                                                        src="/uploads/image1/<%= product.image1[0].filename %>"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="products-overlay">
+                                                                    <div class="products-content">
+
+                                                                        <h4>
+                                                                            <%= product.name %>
+                                                                        </h4>
+                                                                        <h5> <span>id</span> : <%= product.gid %>
+                                                                        </h5>
+                                                                        <p> <span> <i>designer :</i> </span>
+                                                                            <%= product.designer %>
+                                                                        </p>
+                                                                        <p><span> category </span>: <%= product.category
+                                                                                %>
+                                                                        </p>
+                                                                        <p>
+                                                                            <%= product.description %>.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <% }) %>
+                                                            <% } else { %>
+                                                                <p></p>
+                                                                <% } %>
+
+                                            </div>
+                                            <!-- outingwear -->
+                                            <div class="outingwear">
+                                                <% if(dress.outingwear !='' ) { %>
+                                                    <% dress.outingwear.forEach(function(product, index){ %>
+
+                                                        <div class="mix products-item outingwear">
+                                                            <a href="/product/<%= product._id %>">
+                                                                <div class="products-img"><img
+                                                                        src="/uploads/image1/<%= product.image1[0].filename %>"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="products-overlay">
+                                                                    <div class="products-content">
+
+                                                                        <h4>
+                                                                            <%= product.name %>
+                                                                        </h4>
+                                                                        <h5> <span>id</span> : <%= product.gid %>
+                                                                        </h5>
+                                                                        <p> <span> <i>designer :</i> </span>
+                                                                            <%= product.designer %>
+                                                                        </p>
+                                                                        <p><span> category </span>: <%= product.category
+                                                                                %>
+                                                                        </p>
+                                                                        <p>
+                                                                            <%= product.description %>.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <% }) %>
+                                                            <% } else { %>
+                                                                <p></p>
+                                                                <% } %>
+
+                                            </div>
+                                            <!-- activewear -->
+                                            <div class="activewear">
+                                                <% if(dress.activewear !='' ) { %>
+                                                    <% dress.activewear.forEach(function(product, index){ %>
+
+                                                        <div class="mix products-item activewear">
+                                                            <a href="/product/<%= product._id %>">
+                                                                <div class="products-img"><img
+                                                                        src="/uploads/image1/<%= product.image1[0].filename %>"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="products-overlay">
+                                                                    <div class="products-content">
+
+                                                                        <h4>
+                                                                            <%= product.name %>
+                                                                        </h4>
+                                                                        <h5> <span>id</span> : <%= product.gid %>
+                                                                        </h5>
+                                                                        <p> <span> <i>designer :</i> </span>
+                                                                            <%= product.designer %>
+                                                                        </p>
+                                                                        <p><span> category </span>: <%= product.category
+                                                                                %>
+                                                                        </p>
+                                                                        <p>
+                                                                            <%= product.description %>.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <% }) %>
+                                                            <% } else { %>
+                                                                <p></p>
+                                                                <% } %>
+                                            </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <%- include('include/_footer') %>
+
+                <!--------- Javascript for toggle menu -------->
+
+                <script src="js/js.js"></script>
+
+                <!-------- jquery ------->
+                <script src="js/jquery-3.6.0.min.js"></script>
+
+
+                <!-- ---------- aos ----------->
+
+                <script src="js/aos.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        AOS.init({
+                            duration: 1000,
+                            offset: 150
+                        });
+                    });
+                </script>
+
+
+
+
+                <!------ mixitup ------->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
+                    integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
+                    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+                <!-- <script>
+
+
+        $(document).ready(function () {
+            var mixer = mixitup('.products-list', {
+                load: {
+                    filter: '.denims'
+                }
+            });
+        });
+    </script> -->
+
+
+                <script>
+                    function getQueryVariable(variable) {
+                        var query = window.location.search.substring(1);
+                        var vars = query.split("&");
+                        for (var i = 0; i < vars.length; i++) {
+                            var pair = vars[i].split("=");
+                            if (pair[0] == variable) { return pair[1]; }
+                        }
+                        return (false);
+                    }
+
+                    // url:
+                    // http://www.example.com/about?filter=paris //
+                    var filterParam = getQueryVariable("filter"); // return paris for this url;
+                    if (filterParam == '*') {
+                        filterParam = filterParam
+                    }
+
+                    else filterParam = '.' + filterParam
+
+                    $(document).ready(function () {
+                        var mixer = mixitup('.products-list', {
+                            load: {
+                                filter: filterParam
+                            }
+                        });
+                    });
+
+
+
+
+
+                </script>
+    </body>
+
+    </html>

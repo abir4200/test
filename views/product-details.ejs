@@ -1,0 +1,213 @@
+<%- include('include/_head') %>
+    </head>
+
+    <body>
+
+
+        <%- include('include/_header') %>
+
+            <% if(product !=null ) { %>
+                <div id="menuBG" class="card-wrapper">
+                    <div class="card">
+                        <!-- card left -->
+                        <div class="product-imgs">
+                            <div class="img-display">
+                                <div class="img-showcase">
+                                    <img src="/uploads/image1/<%-product.image1[0].filename%>"
+                                        alt="<%- product.name %>">
+                                    <img src="/uploads/image1/<%- product.image2[0].filename%>"
+                                        alt="<%- product.name %>">
+                                    <img src="/uploads/image1/<%- product.image3[0].filename %>"
+                                        alt="<%- product.name %>">
+                                    <img src="/uploads/image1/<%- product.image4[0].filename %>"
+                                        alt="<%- product.name %>">
+                                </div>
+                            </div>
+                            <div class="img-select">
+                                <div class="img-item">
+                                    <a href="#" data-id="1">
+                                        <img src="/uploads/image1/<%-product.image1[0].filename%>"
+                                            alt="<%- product.name %>">
+                                    </a>
+                                </div>
+                                <div class="img-item">
+                                    <a href="#" data-id="2">
+                                        <img src="/uploads/image1/<%- product.image2[0].filename%>"
+                                            alt="<%- product.name %>">
+                                    </a>
+                                </div>
+                                <div class="img-item">
+                                    <a href="#" data-id="3">
+                                        <img src="/uploads/image1/<%- product.image3[0].filename%>"
+                                            alt="<%- product.name %>">
+                                    </a>
+                                </div>
+                                <div class="img-item">
+                                    <a href="#" data-id="4">
+                                        <img src="/uploads/image1/<%- product.image4[0].filename%>"
+                                            alt="<%- product.name %>">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- card right -->
+                        <div class="product-content">
+                            <h2 class="product-title">
+                                <%- product.name %>
+                            </h2>
+
+
+
+
+
+                            <div class="product-detail">
+                                <h5><span>Category: </span>
+                                    <%- product.category %>
+                                </h5>
+                                <h4><span class="designer"><i>Designer</i> : </span>
+                                    <%- product.designer %>
+                                </h4>
+                                <h5 class="product-id"><span>Id: </span>
+                                    <%- product.gid %>
+                                </h5>
+                                <h3>about this item: </h3>
+                                <p>
+                                    <%- product.description %>
+                                </p>
+                                <p>
+                                    <%- product.description2 %>
+                                </p>
+                                <h5>Materials</h5>
+                                <ol>
+                                    <% product.ingredients.forEach(function(ingredients, index){ %>
+                                        <li>
+                                            <%= ingredients %>
+                                        </li>
+                                        <% }) %>
+                                </ol>
+                            </div>
+
+                            <div class="purchase-info">
+                                <button type="button" class="btn">Place Order <i class="fas fa-shopping-cart"></i>
+                                </button>
+                                <button class="btn"> <a href="products?filter=*"> Other Products </a></button>
+                            </div>
+
+                            <div class="social-links">
+                                <p>Contact us @.. </p>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fab fa-pinterest"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <% } else { %>
+                    <p>No item found.</p>
+                    <% } %>
+                        <div class="jump-button" data-aos="fade-up" data-aos-offset="150">
+                            <a href="#"> <i class="fas fa-level-up-alt"></i></a>
+                        </div>
+                        <!-- category start -->
+
+                        <section class="categories">
+                            <h2>CATEGORIES</h2>
+                            <div class="category-container">
+                                <div class="category-card">
+                                    <a href="/products?filter=denims">
+                                        <div class="category-img">
+                                            <img src="/images/products/img1.jpg" alt="">
+                                        </div>
+                                        <p>Denims</p>
+                                    </a>
+                                </div>
+                                <div class="category-card">
+                                    <a href="/products?filter=suits">
+                                        <div class="category-img">
+                                            <img src="/images/products/img2.jpg" alt="">
+                                        </div>
+                                        <p>Suits</p>
+                                    </a>
+                                </div>
+                                <div class="category-card">
+                                    <a href="/products?filter=sweater">
+                                        <div class="category-img">
+                                            <img src="/images/products/img3.jpg" alt="">
+                                        </div>
+                                        <p>Sweater</p>
+                                    </a>
+                                </div>
+                                <div class="category-card">
+                                    <a href="/products?filter=intimates">
+                                        <div class="category-img">
+                                            <img src="/images/products/img4.jpg" alt="">
+                                        </div>
+                                        <p>Intimates</p>
+                                    </a>
+                                </div>
+                                <div class="category-card">
+                                    <a href="/products?filter=outingwear">
+                                        <div class="category-img">
+                                            <img src="/images/products/img5.jpg" alt="">
+                                        </div>
+                                        <p>Outingwear</p>
+                                    </a>
+                                </div>
+                                <div class="category-card">
+                                    <a href="/products?filter=activewear">
+                                        <div class="category-img">
+                                            <img src="/images/products/img6.jpg" alt="">
+                                        </div>
+                                        <p>Activewear</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- category end -->
+
+
+                        <%- include('include/_footer') %>
+
+                            <script src="/js/product.js"></script>
+
+
+                            <!--------- Javascript for toggle menu -------->
+
+                            <script src="/js/js.js"></script>
+
+                            <!-------- jquery ------->
+                            <!-------- jquery ------->
+                            <!-------- jquery ------->
+                            <!-------- jquery ------->
+                            <!-------- jquery ------->
+                            <script src="/js/jquery-3.6.0.min.js"></script>
+
+                            <!------------ aos ----------->
+
+                            <script src="/js/aos.js"></script>
+
+                            <script>
+                                $(document).ready(function () {
+                                    AOS.init({
+                                        duration: 1000,
+                                        offset: 150
+                                    });
+                                });
+                            </script>
+    </body>
+
+    </html>

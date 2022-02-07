@@ -1,0 +1,46 @@
+.admin-nav {
+  width: 90%;
+}
+
+.admin-container {
+  min-height: 80vh;
+}
+
+nav .fas {
+  display: unset;
+}
+
+.index-alert {
+  position: relative;
+}
+
+.index-alert-btn {
+  position: absolute;
+  top: 12px;
+  right: 8px;
+}
+
+/***** submit ****/
+
+.submit {
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.submit-body {
+  background: rgb(250, 250, 250);
+}
+
+.slt-ctg {
+  margin-top: 8px;
+}
+
+.form-body {
+  display: flex;
+}
+
+.sub-contsiner {
+  width: 95%;
+}

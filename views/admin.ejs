@@ -1,0 +1,85 @@
+<%- include('include/_admin-head') %>
+
+    <div class="admin-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <% if (message) { %>
+                        <div class="alert alert-sdismissable fade show alert-<%= message.type %> index-alert"
+                            role="alert">
+                            <strong>
+                                <%= message.message %>
+                            </strong>
+                            <button class="btn-close index-alert-btn" type="button" data-bs-dismiss="alert"
+                                aria-label="close"></button>
+                        </div>
+                        <% } %>
+                            <div class="table-responsive">
+                                <% if (products !='' ) { %>
+                                    <table class="table table-striped text-center">
+                                        <thead>
+                                            <tr class="table-dark">
+                                                <th> Serial</th>
+                                                <th>Images</th>
+                                                <th>Name</th>
+                                                <th>Category</th>
+                                                <th>Id</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% products.forEach((product, index)=> { %>
+                                                <tr class="align-middle">
+                                                    <td>
+                                                        <%= index %>
+                                                    </td>
+                                                    <td>
+                                                        <a title="View Product Details"
+                                                            href="/product/<%= product._id %>">
+                                                            <img src="/uploads/image1/<%=product.image1[0].filename%>"
+                                                                width="80" class="img-thumbnail"
+                                                                alt="<%=product.name %>">
+                                                        </a>
+                                                    </td>
+
+                                                    <td>
+                                                        <%=product.name %>
+                                                    </td>
+                                                    <td>
+                                                        <%=product.category %>
+                                                    </td>
+                                                    <td>
+                                                        <%=product.gid %>
+                                                    </td>
+                                                    <td>
+                                                        <a href="/admin/product/update/<%=product._id%>"
+                                                            class="text-success"><i class="fas fa-edit fa-ls mx-1"></i>
+                                                        </a>
+                                                        <a href="/admin/product/delete/<%=product._id%>"
+                                                            class="text-danger"><i class="fas fa-trash fa-ls mx-1"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <% })%>
+                                        </tbody>
+                                    </table>
+
+                                    <% } else { %>
+                                        <h1 class="text-center text-secondary mt-5"> No User found in the database</h1>
+                                        <% }%>
+                            </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <%- include('include/_footer') %>
+
+        <!--  -->
+        </body>
+
+        </html>

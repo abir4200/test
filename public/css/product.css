@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  line-height: 1.5;
+  background: rgb(241, 241, 241);
+}
+.card-wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 5%;
+}
+.card-wrapper img {
+  width: 100%;
+  display: block;
+}
+.card-wrapper .img-display {
+  overflow: hidden;
+}
+.card-wrapper .img-showcase {
+  display: flex;
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.card-wrapper .img-showcase img {
+  min-width: 100%;
+  object-fit: cover;
+}
+.card-wrapper .img-select {
+  display: flex;
+}
+
+.card-wrapper .img-select .img-item {
+  width: 100%;
+  height: 125px;
+}
+.card-wrapper .img-select .img-item img {
+  object-fit: cover;
+  height: 125px;
+}
+
+.card-wrapper .img-item {
+  margin: 0.3rem;
+}
+.card-wrapper .img-item:nth-child(1),
+.card-wrapper .img-item:nth-child(2),
+.card-wrapper .img-item:nth-child(3) {
+  margin-right: 0;
+}
+.card-wrapper .img-item:hover {
+  opacity: 0.8;
+}
+.card-wrapper .product-content {
+  padding: 2rem 1rem;
+}
+.card-wrapper .product-title {
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  position: relative;
+  color: #12263a;
+  margin: 1rem 0;
+}
+.card-wrapper .product-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 80px;
+  background: #838383;
+}
+.card-wrapper .product-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.9rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  background: #256eff;
+  color: #fff;
+  padding: 0 0.3rem;
+  transition: all 0.5s ease;
+}
+.card-wrapper .product-link:hover {
+  opacity: 0.9;
+}
+.card-wrapper .product-rating {
+  color: #ffc107;
+}
+.card-wrapper .product-rating span {
+  font-weight: 600;
+  color: #252525;
+}
+.card-wrapper .product-price {
+  margin: 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.card-wrapper .product-price span {
+  font-weight: 400;
+}
+.card-wrapper .last-price span {
+  color: #f64749;
+  text-decoration: line-through;
+}
+.card-wrapper .new-price span {
+  color: #256eff;
+}
+.card-wrapper .product-detail {
+  position: relative;
+}
+.card-wrapper .product-detail .designer {
+  text-transform: capitalize;
+}
+
+.card-wrapper .product-detail h3 {
+  text-transform: capitalize;
+  color: #12263a;
+  padding-top: 0.6rem;
+  font-weight: 700;
+}
+.card-wrapper .product-detail h4 span,
+.card-wrapper .product-detail h5 span {
+  text-transform: capitalize;
+  color: #061b2f;
+  padding-bottom: 0.6rem;
+  font-weight: 600;
+}
+.card-wrapper .product-detail p {
+  font-size: 0.1.2rem;
+  padding: 0.3rem;
+  opacity: 0.8;
+}
+
+.card-wrapper .product-detail .product-id {
+  position: absolute;
+  top: -60px;
+  right: 20px;
+  color: #ff0000;
+}
+.card-wrapper .product-detail ul {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+.card-wrapper .product-detail ul li {
+  margin: 0;
+  list-style: none;
+  background: url(shoes_images/checked.png) left center no-repeat;
+  background-size: 18px;
+  /* padding-left: 1.7rem; */
+  margin: 0.4rem 0;
+  font-weight: 600;
+  opacity: 0.9;
+}
+.card-wrapper .product-detail ul li span {
+  font-weight: 400;
+}
+.card-wrapper .purchase-info {
+  margin: 1.5rem 0;
+}
+.card-wrapper .purchase-info input,
+.card-wrapper .purchase-info .btn {
+  border: 1.5px solid #ddd;
+  border-radius: 25px;
+  text-align: center;
+  padding: 0.45rem 0.8rem;
+  outline: 0;
+  margin-right: 0.2rem;
+  margin-bottom: 1rem;
+}
+.card-wrapper .purchase-info input {
+  width: 60px;
+}
+.card-wrapper .purchase-info .btn,
+.card-wrapper .purchase-info a {
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.card-wrapper .purchase-info .btn:first-of-type {
+  background: #256eff;
+}
+.card-wrapper .purchase-info .btn:last-of-type {
+  background: #f64749;
+}
+.card-wrapper .purchase-info .btn:hover {
+  opacity: 0.8;
+}
+.card-wrapper .social-links {
+  display: flex;
+  align-items: center;
+}
+.card-wrapper .social-links p {
+  padding-top: 20px;
+}
+.card-wrapper .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #000;
+  border: 1px solid #000;
+  margin: 0 0.2rem;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: all 0.5s ease;
+}
+.card-wrapper .social-links a:hover {
+  background: #000;
+  border-color: transparent;
+  color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .card-wrapper .card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+  .card-wrapper .card-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-wrapper .product-imgs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card-wrapper .product-content {
+    padding-top: 0;
+  }
+}
+
+.categories {
+  width: 100%;
+  text-align: center;
+}
+
+.categories h2 {
+  font-weight: 700;
+}
+
+.category-container {
+  width: 80%;
+  margin: 55px auto;
+  display: flex;
+  min-height: 300px;
+  flex-wrap: wrap;
+}
+.category-card {
+  margin: 5px auto;
+  height: 160px;
+  min-width: 230px;
+}
+.category-card a {
+  text-decoration: none;
+}
+.category-card P {
+  font-weight: 600;
+}
+
+.category-img {
+  height: 130px;
+  min-width: 230px;
+
+  /* display: flex;
+  position: relative; */
+}
+
+.category-img img {
+  height: 120px;
+  min-width: 220px;
+  object-fit: cover;
+  transition: 0.1s;
+  border-radius: 5px;
+  box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(82, 82, 82, 0.5);
+  border-left: 2px solid rgba(85, 85, 85, 0.7);
+  border-bottom: inset 1px solid rgba(255, 255, 255, 0);
+  backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.005);
+}
+.category-img img:hover {
+  height: 130px;
+  min-width: 230px;
+  filter: blur(1px);
+}
